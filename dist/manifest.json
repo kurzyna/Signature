@@ -17,7 +17,7 @@
   },
   "accentColor": "#230201",
   "developer": {
-    "name": "Contoso",
+    "name": "AKMF",
     "websiteUrl": "https://www.contoso.com/help",
     "privacyUrl": "https://www.contoso.com/help",
     "termsOfUseUrl": "https://www.contoso.com/help"
@@ -35,7 +35,7 @@
       ]
     }
   },
-  "validDomains": ["https://www.contoso.com"],
+  "validDomains": ["AKMF"],
   "extensions": [
     {
       "requirements": {
@@ -60,8 +60,8 @@
           "id": "runtime_1",
           "type": "general",
           "code": {
-            "page": "https://www.contoso.com/autorunweb.html",
-            "script": "https://www.contoso.com/autorunshared.js"
+            "page": "https://kurzyna.github.io/Signature/dist/autorunweb.html",
+            "script": "https://kurzyna.github.io/Signature/dist/autorunshared.js"
           },
           "lifetime": "short",
           "actions": [
@@ -84,7 +84,7 @@
           "id": "runtime_2",
           "type": "general",
           "code": {
-            "page": "https://www.contoso.com/editsignature.html"
+            "page": "https://kurzyna.github.io/Signature/dist/editsignature.html"
           },
           "lifetime": "short",
           "actions": [
@@ -133,15 +133,15 @@
                       "icons": [
                         {
                           "size": 16,
-                          "url": "https://www.contoso.com/assets/akmf_logo.png"
+                          "url": "https://kurzyna.github.io/Signature/dist/assets/akmf_logo.png"
                         },
                         {
                           "size": 32,
-                          "url": "https://www.contoso.com/assets/akmf_logo.png"
+                          "url": "https://kurzyna.github.io/Signature/dist/assets/akmf_logo.png"
                         },
                         {
                           "size": 80,
-                          "url": "https://www.contoso.com/assets/akmf_logo.png"
+                          "url": "https://kurzyna.github.io/Signature/dist/assets/akmf_logo.png"
                         }
                       ],
                       "supertip": {
@@ -185,15 +185,15 @@
                       "icons": [
                         {
                           "size": 16,
-                          "url": "https://www.contoso.com/assets/final_logo.png"
+                          "url": "https://kurzyna.github.io/Signature/dist/assets/final_logo.png"
                         },
                         {
                           "size": 32,
-                          "url": "https://www.contoso.com/assets/final_logo.png"
+                          "url": "https://kurzyna.github.io/Signature/dist/assets/final_logo.png"
                         },
                         {
                           "size": 80,
-                          "url": "https://www.contoso.com/assets/final_logo.png"
+                          "url": "https://kurzyna.github.io/Signature/dist/assets/final_logo.png"
                         }
                       ],
                       "supertip": {
@@ -234,7 +234,7 @@
           ]
         }
       ],
-      "audienceClaimUrl": "https://www.contoso.com/editsignature.html"
+      "audienceClaimUrl": "https://kurzyna.github.io/Signature/dist/editsignature.html"
     }
   ],
   "showLoadingIndicator": false,
