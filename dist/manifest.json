@@ -35,7 +35,7 @@
       ]
     }
   },
-  "validDomains": ["AKMF"],
+  "validDomains": ["https://kurzyna.github.io"],
   "extensions": [
     {
       "requirements": {
@@ -185,15 +185,15 @@
                       "icons": [
                         {
                           "size": 16,
-                          "url": "https://kurzyna.github.io/Signature/dist/assets/final_logo.png"
+                          "url": "https://kurzyna.github.io/Signature/dist/assets/akmf_logo.png"
                         },
                         {
                           "size": 32,
-                          "url": "https://kurzyna.github.io/Signature/dist/assets/final_logo.png"
+                          "url": "https://kurzyna.github.io/Signature/dist/assets/akmf_logo.png"
                         },
                         {
                           "size": 80,
-                          "url": "https://kurzyna.github.io/Signature/dist/assets/final_logo.png"
+                          "url": "https://kurzyna.github.io/Signature/dist/assets/akmf_logo.png"
                         }
                       ],
                       "supertip": {
