@@ -1,12 +1,11 @@
+
 {
   "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
   "manifestVersion": "1.17",
   "id": "f1f7c466-04ca-45e7-a1da-9242cd7fc989",
-<<<<<<< HEAD
+
   "version": "1.0.0.9",
-=======
-  "version": "1.0.0.6",
->>>>>>> 502ff6e4adb026cd16e6f044e2c4dff9c83f5fe0
+
   "name": {
     "short": "AKMF Signature",
     "full": "AKMF Signature"
@@ -245,3 +244,4 @@
   "isFullScreen": false,
   "defaultBlockUntilAdminAction": false
 }
+
