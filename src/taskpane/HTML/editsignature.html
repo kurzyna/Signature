@@ -1,0 +1,44 @@
+<!-- Copyright (c) Microsoft Corporation.
+     Licensed under the MIT License. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Formularz podpisu</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="../CSS/editsignature.css" rel="stylesheet" type="text/css" media="all" />
+  <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="../../utilities.js"></script>
+  <script type="text/javascript" src="../Js/taskpane_render.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Uzupełnij dane do podpisu</h2>
+
+    <input type="text" id="display_name" placeholder="Imię i Nazwisko*" onclick="this.select()" required />
+
+    <input type="email" id="email_id" placeholder="Adres Email*" onclick="this.select()" required />
+
+    <input type="text" id="job_title" placeholder="Stanowisko*" required />
+
+    <input type="text" id="phone_number" placeholder="Numer Telefonu" />
+
+    <input type="text" placeholder="Zespół" id="team_name" />
+
+    <input type="text" placeholder="Departament" id="department_name" />
+
+    <div class="buttons-row">
+      <button id="next_button_t1" class="registerbtn" onclick="create_user_info()">Podgląd</button>
+      <button id="reset_all_config_btn" class="registerbtn" onclick="reset_all_configuration()">Wyczyść</button>
+    </div>
+
+    <p id="message"></p>
+  </div>
+
+</body>
+
+</html>

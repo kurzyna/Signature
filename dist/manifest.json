@@ -1,0 +1,243 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.17",
+  "id": "f1f7c466-04ca-45e7-a1da-9242cd7fc989",
+  "version": "1.0.0.2",
+  "name": {
+    "short": "AKMF Signature",
+    "full": "AKMF Signature"
+  },
+  "description": {
+    "short": "Wstawiaj swoją stopkę szybko i bez wysiłku.",
+    "full": "Wstawiaj swoją stopkę szybko i bez wysiłku."
+  },
+  "icons": {
+    "outline": "assets/akmf_logo.png",
+    "color": "assets/akmf_logo.png"
+  },
+  "accentColor": "#230201",
+  "developer": {
+    "name": "AKMF",
+    "websiteUrl": "https://www.contoso.com/help",
+    "privacyUrl": "https://www.contoso.com/help",
+    "termsOfUseUrl": "https://www.contoso.com/help"
+  },
+  "localizationInfo": {
+    "defaultLanguageTag": "en-us"
+  },
+  "authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        {
+          "name": "Mailbox.ReadWrite.User",
+          "type": "Delegated"
+        }
+      ]
+    }
+  },
+  "validDomains": ["https://kurzyna.github.io"],
+  "extensions": [
+    {
+      "requirements": {
+        "capabilities": [
+          {
+            "name": "Mailbox",
+            "minVersion": "1.1"
+          }
+        ],
+        "scopes": ["mail"]
+      },
+      "runtimes": [
+        {
+          "requirements": {
+            "capabilities": [
+              {
+                "name": "Mailbox",
+                "minVersion": "1.5"
+              }
+            ]
+          },
+          "id": "runtime_1",
+          "type": "general",
+          "code": {
+            "page": "https://kurzyna.github.io/Signature/dist/autorunweb.html",
+            "script": "https://kurzyna.github.io/Signature/dist/autorunshared.js"
+          },
+          "lifetime": "short",
+          "actions": [
+            {
+              "id": "checkSignature",
+              "type": "executeFunction",
+              "displayName": "checkSignature"
+            }
+          ]
+        },
+        {
+          "requirements": {
+            "capabilities": [
+              {
+                "name": "Mailbox",
+                "minVersion": "1.5"
+              }
+            ]
+          },
+          "id": "runtime_2",
+          "type": "general",
+          "code": {
+            "page": "https://kurzyna.github.io/Signature/dist/editsignature.html"
+          },
+          "lifetime": "short",
+          "actions": [
+            {
+              "id": "action_1",
+              "type": "openPage",
+              "view": "view_1",
+              "displayName": "action_1",
+              "pinnable": false
+            },
+            {
+              "id": "action_2",
+              "type": "openPage",
+              "view": "view_2",
+              "displayName": "action_2",
+              "pinnable": false
+            }
+          ]
+        }
+      ],
+      "ribbons": [
+        {
+          "requirements": {
+            "capabilities": [
+              {
+                "name": "Mailbox",
+                "minVersion": "1.5"
+              }
+            ],
+            "scopes": ["mail"],
+            "formFactors": ["desktop"]
+          },
+          "contexts": ["mailCompose"],
+          "tabs": [
+            {
+              "builtInTabId": "TabDefault",
+              "groups": [
+                {
+                  "id": "mccsG0",
+                  "label": "Signature Injector",
+                  "controls": [
+                    {
+                      "id": "MRCS_TpBtn0",
+                      "type": "button",
+                      "label": "AKMF Signature",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://kurzyna.github.io/Signature/dist/assets/akmf_logo.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://kurzyna.github.io/Signature/dist/assets/akmf_logo.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://kurzyna.github.io/Signature/dist/assets/akmf_logo.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "AKMF Signature",
+                        "description": "Otwiera panel z ustawieniami podpisu i danymi użytkownika."
+                      },
+                      "actionId": "action_1",
+                      "overriddenByRibbonApi": false,
+                      "enabled": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "requirements": {
+            "capabilities": [
+              {
+                "name": "Mailbox",
+                "minVersion": "1.5"
+              }
+            ],
+            "scopes": ["mail"],
+            "formFactors": ["desktop"]
+          },
+          "contexts": ["meetingDetailsOrganizer"],
+          "tabs": [
+            {
+              "builtInTabId": "TabDefault",
+              "groups": [
+                {
+                  "id": "aocsG0",
+                  "label": "Signature Injector2",
+                  "controls": [
+                    {
+                      "id": "MRCS_TpBtn1",
+                      "type": "button",
+                      "label": "AKMF Signature",
+                      "icons": [
+                        {
+                          "size": 16,
+                          "url": "https://kurzyna.github.io/Signature/dist/assets/akmf_logo.png"
+                        },
+                        {
+                          "size": 32,
+                          "url": "https://kurzyna.github.io/Signature/dist/assets/akmf_logo.png"
+                        },
+                        {
+                          "size": 80,
+                          "url": "https://kurzyna.github.io/Signature/dist/assets/akmf_logo.png"
+                        }
+                      ],
+                      "supertip": {
+                        "title": "AKMF Signature",
+                        "description": "Otwiera panel z ustawieniami podpisu i danymi użytkownika."
+                      },
+                      "actionId": "action_2",
+                      "overriddenByRibbonApi": false,
+                      "enabled": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "autoRunEvents": [
+        {
+          "requirements": {
+            "capabilities": [
+              {
+                "name": "Mailbox",
+                "minVersion": "1.5"
+              }
+            ],
+            "scopes": ["mail"]
+          },
+          "events": [
+            {
+              "type": "newMessageComposeCreated",
+              "actionId": "checkSignature"
+            },
+            {
+              "type": "newAppointmentOrganizerCreated",
+              "actionId": "checkSignature"
+            }
+          ]
+        }
+      ],
+      "audienceClaimUrl": "https://kurzyna.github.io/Signature/dist/editsignature.html"
+    }
+  ],
+  "showLoadingIndicator": false,
+  "isFullScreen": false,
+  "defaultBlockUntilAdminAction": false
+}

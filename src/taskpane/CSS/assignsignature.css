@@ -1,0 +1,626 @@
+/* —— Paleta i ogólne —— */
+:root {
+  --font: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --border: #d1d5db;
+  --primary: #2563eb;
+  --primary-600: #1d4ed8;
+  --success: #16a34a;
+  --success-700: #15803d;
+  --radius: 6px;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  --fast: 0.15s ease;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  font-size: 13px;
+  margin: 0;
+}
+
+/* —— Layout —— */
+.container {
+  position: relative;
+  min-height: 90vh;
+  padding: 8px 0 48px 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  width: calc(100% - 24px);
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  background: #fafafa;
+  color: var(--muted);
+  font-size: 12px;
+  padding: 0 8px;
+}
+
+/* —— Tekst i etykiety —— */
+label {
+  position: relative;
+  left: 14px;
+  display: inline-block;
+  font-size: 13px;
+  color: var(--text);
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+/* —— Select —— */
+select {
+  width: 110px;
+  height: 28px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  outline: none;
+  padding: 0 22px 0 8px;
+  font-size: 13px;
+  color: var(--text);
+  transition:
+    border-color var(--fast),
+    box-shadow var(--fast);
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #9ca3af 50%),
+    linear-gradient(135deg, #9ca3af 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 9px) 50%;
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
+}
+select:hover {
+  border-color: #cbd5e1;
+}
+select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* —— Sekcje i tytuły —— */
+.templates {
+  position: relative;
+  left: 14px;
+  margin: 4px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* —— Podgląd szablonu —— */
+#box_1 {
+  position: relative;
+  left: 14px;
+  width: 270px;
+  height: 320px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 6px;
+  color: #374151;
+  background: #fff;
+  box-shadow: var(--shadow);
+  overflow: auto;
+}
+
+/* —— Teksty w podglądzie —— */
+#greeting_text_box_1,
+#greeting_text_box_2,
+#greeting_text_box_3 {
+  font-size: 11px;
+  color: #374151;
+}
+
+#name_box_1,
+#name_box_2,
+#name_box_3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* —— Linie separatorów —— */
+#line_box_1,
+#line_box_2,
+#line_box_3 {
+  border-left: 1px solid #c7d2fe;
+}
+
+/* —— Przyciski —— */
+button,
+.testBtn,
+#edit_button,
+#submit_button,
+#hard_reset_button {
+  height: 28px;
+  line-height: 28px;
+  padding: 0 12px;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.05s,
+    box-shadow var(--fast),
+    background var(--fast);
+}
+button:active,
+.testBtn:active,
+#edit_button:active,
+#submit_button:active,
+#hard_reset_button:active {
+  transform: translateY(1px);
+}
+
+/* zielony test – węższy i wyśrodkowany */
+.testBtn {
+  display: block;
+  margin: 10px auto;
+  width: 160px;
+  height: 32px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--success);
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  transition:
+    background 0.15s ease,
+    transform 0.1s ease;
+}
+.testBtn:hover {
+  background: var(--success-700);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+/* szary edytuj */
+#edit_button {
+  background: #fff;
+  color: var(--text);
+  border-color: var(--border);
+}
+#edit_button:hover {
+  border-color: #cbd5e1;
+  box-shadow: var(--shadow);
+}
+
+/* niebieski zapisz */
+#submit_button {
+  color: #fff;
+  background: var(--primary);
+}
+#submit_button:hover {
+  background: var(--primary-600);
+  box-shadow: var(--shadow);
+}
+
+/* reset */
+#hard_reset_button {
+  background: #fff;
+  color: var(--text);
+  border-color: var(--border);
+}
+#hard_reset_button:hover {
+  border-color: #cbd5e1;
+  box-shadow: var(--shadow);
+}
+
+/* —— Komunikat —— */
+#message {
+  position: relative;
+  display: none;
+  margin-top: 8px;
+  color: #065f46;
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+  border-radius: var(--radius);
+  font-weight: 600;
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+/* —— Drobne napisy —— */
+#override_sig {
+  font-size: 14px;
+  color: var(--text);
+}
+#newMApt {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.4;
+  width: 100%;
+  white-space: normal;
+}
+
+/* —— Logo — lepsze skalowanie —— */
+#logo_box_1,
+#logo_box_2,
+#logo_box_3 {
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+/* —— Dostosowanie do Outlook taskpane —— */
+html,
+body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  margin: 0;
+  padding: 0;
+}
+
+.container-taskp {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+
+/* Reset szerokości bez testBtn */
+#box_1,
+label,
+.templates,
+#edit_button,
+#submit_button,
+#message,
+#override_sig,
+#newMApt {
+  left: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* Przyciski obok siebie */
+#edit_button,
+#submit_button {
+  display: inline-block;
+  width: calc(50% - 6px);
+  margin-right: 4px;
+  margin-top: 6px;
+}
+
+/* === NADPISZ STOPKĘ OUTLOOK === */
+#override_sig {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 10px 8px 0 0;
+}
+#override_sig,
+.switch {
+  vertical-align: middle;
+}
+
+/* === PRZEŁĄCZNIK KOMPAKTOWY === */
+.switch {
+  width: 48px;
+  height: 24px;
+  position: relative;
+  top: 5px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  border-radius: 12px;
+  background: #ccc;
+  transition: background 0.2s ease;
+}
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  top: 4px;
+  left: 4px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+input:checked + .slider {
+  background: #2563eb;
+}
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+/* === Poprawione: równe selecty i sekcja przełącznika === */
+/* ——— Równe, wyrównane do prawej listy w 2 kolumnach, bez zmiany HTML ——— */
+.dropdown {
+  margin: 6px 0;
+}
+
+.dropdown label {
+  left: 0 !important;
+  display: grid;
+  grid-template-columns: 1fr 160px; /* lewa kolumna: tekst, prawa: select */
+  align-items: center;
+  column-gap: 10px;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.dropdown label select {
+  grid-column: 2; /* prawa kolumna */
+  justify-self: end; /* wyrównanie do prawej */
+  width: 160px; /* stała szerokość dla wszystkich */
+  height: 32px;
+}
+
+/* jeśli gdzieś wymuszało wrap — pozwól tekstowi zawijać się, ale trzymaj select w kolumnie */
+.dropdown label {
+  word-break: break-word;
+}
+
+/* Sekcja przełącznika: w jednej linii */
+.override-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 4px 0;
+  width: 100%;
+}
+
+#override_sig {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* Sam przełącznik */
+.switch {
+  position: relative;
+  width: 42px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  background: #d1d5db;
+  border-radius: 22px;
+  transition: all 0.2s ease;
+}
+.slider:before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+input:checked + .slider {
+  background: #2563eb;
+}
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+/* === RZĄD PRZYCISKÓW (Edytuj + Zapisz) === */
+.buttons-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.registerbtn,
+#edit_button,
+#submit_button {
+  flex: 1;
+  height: 36px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.15s ease;
+  border: 1px solid transparent;
+}
+
+/* Edytuj — neutralny styl */
+#edit_button {
+  background: #fff;
+  color: #1f2937;
+  border-color: #d1d5db;
+}
+#edit_button:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Zapisz — główny akcent */
+#submit_button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+}
+#submit_button:hover {
+  background: #1d4ed8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Aktywne kliknięcie */
+#edit_button:active,
+#submit_button:active {
+  transform: translateY(1px);
+}
+
+/* Drobna optymalizacja spacingu pod przyciskami */
+#message {
+  margin-top: 12px;
+}
+/* === Naprawa sekcji "Nadpisz stopkę Outlook" – jedna linia === */
+
+/* cofamy wcześniejsze width:100% !important */
+/* === Naprawa: "Nadpisz stopkę Outlook" w jednej linii === */
+.override-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+/* Jeśli nie ma klasy .override-row w HTML, możemy ją emulować przez ID */
+#override_sig,
+.switch {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
+
+/* zawijamy tekst + przełącznik razem w flexa */
+#override_sig {
+  width: auto !important;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-right: 10px;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+/* suwak obok tekstu */
+.switch {
+  flex-shrink: 0;
+  width: 48px;
+  height: 24px;
+  position: relative;
+}
+
+/* zachowanie suwaka bez zmian */
+.slider {
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  border-radius: 12px;
+  transition: background 0.2s ease;
+}
+.slider:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 4px;
+  left: 4px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+input:checked + .slider {
+  background: #2563eb;
+}
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+/* schowaj selekty i opis spotkań */
+.dropdown,
+#newMApt {
+  display: none !important;
+}
+/* --- Sekcja: Nadpisz stopkę Outlook (kompaktowy switch) --- */
+/* === SEKCA "Nadpisz stopkę Outlook" — pionowe wyśrodkowanie === */
+.override-row {
+  display: flex;
+  align-items: center; /* <-- wyśrodkowanie w pionie */
+  justify-content: space-between;
+  gap: 12px;
+  margin: 12px 0;
+  padding: 2px 0;
+  width: 100%;
+}
+
+/* Tekst — nieco większy, wyrównany do środka względem suwaka */
+#override_sig {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+  flex: 1;
+  line-height: 1; /* wyrównanie pionowe */
+  display: flex;
+  align-items: center; /* dodatkowe dopasowanie */
+}
+
+/* Przełącznik — minimalnie wyżej, żeby był w osi */
+.switch {
+  flex: 0 0 auto;
+  width: 46px !important;
+  height: 24px !important;
+  position: relative;
+  top: 0.5px; /* subtelne podniesienie */
+}
+
+/* Styl suwaka */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .slider {
+  position: absolute;
+  inset: 0;
+  background-color: #d1d5db;
+  transition: background-color 0.2s ease;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.switch .slider:before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  top: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.switch input:checked + .slider {
+  background-color: #2563eb;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(22px);
+}
