@@ -1,8 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
   "manifestVersion": "1.17",
-  "id": "f1f7c466-04ca-45e7-a1da-9242cd7fc989",
-  "version": "1.0.0.2",
+  "id": "4d58ba31-4c5c-4273-97e1-7d9595be6605",
+  "version": "1.0.0.3",
   "name": {
     "short": "AKMF Signature",
     "full": "AKMF Signature"
