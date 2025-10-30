@@ -217,15 +217,17 @@ function get_template_A_str(user_info) {
 
     <!-- odstęp pionowy -->
     <div style="height:14px; line-height:14px; font-size:0;">&nbsp;</div>
+<!-- LOGO dolne -->
+<div style="line-height:1; mso-line-height-rule:at-least;">
+  <a href="https://www.akmf.pl/" target="_blank"
+     style="display:inline-block; text-decoration:none !important; text-underline:none;
+            border:0 !important; outline:0 !important; color:inherit !important;
+            font-family:'Poppins', Arial, Helvetica, sans-serif;">
+    <img src="${logoAK}" width="187" alt="Aplikacje Krytyczne"
+         style="display:block; height:auto; border:0; outline:0; -ms-interpolation-mode:bicubic;">
+  </a>
+</div>
 
-    <!-- LOGO dolne -->
-    <a href="https://www.akmf.pl/" target="_blank"
-       style="display:inline-block; text-decoration:none !important; text-underline:none;
-              border:0 !important; outline:0 !important; color:inherit !important;
-              font-family:'Poppins', Arial, Helvetica, sans-serif;">
-      <img src="${logoAK}" width="187" height="45" alt="Aplikacje Krytyczne"
-           style="display:block; border:0; outline:0; -ms-interpolation-mode:bicubic;">
-    </a>
   </td>
 </tr>
 
